@@ -1,4 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.home-container {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+}
