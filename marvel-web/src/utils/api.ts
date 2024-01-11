@@ -20,8 +20,15 @@ const handleResponse = async <T>(response: Response) => {
     return data.data as T;
 }
 
-export const getCharacters = async (): Promise<CharacterDataWrapper> => {
+export const getHero = async (): Promise<CharacterDataWrapper> => {
   const url = `${API_BASE_URL}/characters?${query}`;
+  const response = await fetch(url);
+
+  return handleResponse<CharacterDataWrapper>(response);
+};
+
+export const getDetailHero = async (characterId: string): Promise<CharacterDataWrapper> => {
+  const url = `${API_BASE_URL}/characters/${characterId}?${query}`;
   const response = await fetch(url);
 
   return handleResponse<CharacterDataWrapper>(response);

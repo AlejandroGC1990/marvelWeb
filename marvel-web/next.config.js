@@ -1,11 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-module.exports = nextConfig;
-
-//heroCardImages
-module.exports = {
+const nextConfig = {
   images: {
-    domains: ["i.annihil.us"],
+    domains: ['i.annihil.us'],
   },
 };
+
+module.exports = nextConfig;

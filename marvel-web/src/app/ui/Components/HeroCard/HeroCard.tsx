@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import "./HeroCard.css";
 import { Character } from "@/app/types/marvels";
 import Image from "next/image";
+import Link from "next/link";
 
 interface HeroCardProps {
   character: Character;
@@ -15,15 +16,14 @@ const HeroCard: FC<HeroCardProps> = ({ character }) => {
         <Image 
           src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
           alt={`${character.name}`} 
-          width="300"
-          height="300"
+          width={500}
+          height={400}
           />
       </div>
       <div className="card-content">
         <h3>{character.name}</h3> 
         <p>{character.description}</p>
-        <p>HEROCARD</p>
-        <button className="btn btn-primary">Detail {character.name}</button>
+        <Link href={`/dashboard/HeroDetail/${character.id}`}  className="btn btn-primary">Detail {character.name}</Link>
       </div>
     </div>
   );
