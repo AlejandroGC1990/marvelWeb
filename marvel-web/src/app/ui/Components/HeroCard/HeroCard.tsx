@@ -23,7 +23,7 @@ const HeroCard: FC<HeroCardProps> = ({ character }) => {
       <div className="card-content">
         <h3>{character.name}</h3> 
         <p>{character.description}</p>
-        <Link href={`/dashboard/HeroDetail/${character.id}`}  className="btn btn-primary">Detail {character.name}</Link>
+        <Link href={`/dashboard/heroDetail/${character.id}`}  className="btn btn-primary">Detail {character.name}</Link>
       </div>
     </div>
   );

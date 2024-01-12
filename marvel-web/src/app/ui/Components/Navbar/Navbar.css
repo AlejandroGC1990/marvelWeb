@@ -10,11 +10,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-
 }
 
 .navbar-title {
   flex: 1; 
+  color: "white";
 }
 
 .navbar-input {

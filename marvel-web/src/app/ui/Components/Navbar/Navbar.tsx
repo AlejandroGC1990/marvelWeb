@@ -1,15 +1,34 @@
-import { FC } from "react";
-import "./Navbar.css";
+'use client';
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FC, KeyboardEvent, useState } from "react";
+import "./Navbar.css";
 
-interface NavbarProps {}
+const Navbar: FC = ({}) => {
+  const router = useRouter();
+  const [ querySearch, setQuerySearch] = useState<string>('');
 
-const Navbar: FC<NavbarProps> = ({}) => {
+  const handleSearch = (event: KeyboardEvent<HTMLInputElement>) => {
+    if(event.key === 'Enter' && querySearch.trim() !== '') {
+      setQuerySearch('');
+      router.push(`/dashboard/search?query=${querySearch}`);
+    }
+  }
+  
   return (
     <div className="navbar-container">
-      <Link href="/" className="navbar-title">Navbar - Marvel Gate</Link>
+      <Link href="/" className="navbar-title">
+        <p>Navbar - Marvel Gate</p>
+      </Link>
       <div className="navbar-input">
-        <input placeholder="Your super..." />
+        <input
+          value={querySearch}
+          type="text"
+          placeholder="Search your super..."
+          onChange={(e) => setQuerySearch(e.target.value)}
+          onKeyDown={handleSearch}
+        />
       </div>
     </div>
   );

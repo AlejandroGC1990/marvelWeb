@@ -1,7 +1,7 @@
 import { getDetailHero } from "@/utils/api";
-import { FC } from "react";
-import "./HeroDetail.css";
 import Image from "next/image";
+import { FC } from "react";
+import "./heroDetail.css";
 
 interface HeroDetailProps {
   params: {
@@ -18,7 +18,7 @@ const HeroDetail: FC<HeroDetailProps> = async ({ params }) => {
     <div className="container">
       <div className="card-image">
         <Image
-          src={`${character.results[0].thumbnail.path}.${character.results[0].thumbnail.extension}`}
+          src={`${thumbnail.path}.${thumbnail.extension}`}
           alt={name}
           width={500}
           height={400}

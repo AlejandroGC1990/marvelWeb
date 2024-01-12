@@ -33,5 +33,3 @@ export const getDetailHero = async (characterId: string): Promise<CharacterDataW
 
   return handleResponse<CharacterDataWrapper>(response);
 };
-
-//MIN 29:37
