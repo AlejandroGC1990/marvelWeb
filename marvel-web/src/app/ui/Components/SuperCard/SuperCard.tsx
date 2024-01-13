@@ -1,14 +1,14 @@
 import React, { FC } from "react";
-import "./HeroCard.css";
+import "./SuperCard.css";
 import { Character } from "@/app/types/marvels";
 import Image from "next/image";
 import Link from "next/link";
 
-interface HeroCardProps {
+interface SuperCardProps {
   character: Character;
 };
 
-const HeroCard: FC<HeroCardProps> = ({ character }) => {
+const SuperCard: FC<SuperCardProps> = ({ character }) => {
 
   return (
     <div className="card-container">
@@ -29,4 +29,4 @@ const HeroCard: FC<HeroCardProps> = ({ character }) => {
   );
 };
 
-export default HeroCard;
+export default SuperCard;

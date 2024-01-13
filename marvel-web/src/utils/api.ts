@@ -20,16 +20,24 @@ const handleResponse = async <T>(response: Response) => {
     return data.data as T;
 }
 
-export const getHero = async (): Promise<CharacterDataWrapper> => {
+export const getSuper = async (): Promise<CharacterDataWrapper> => {
   const url = `${API_BASE_URL}/characters?${query}`;
   const response = await fetch(url);
 
   return handleResponse<CharacterDataWrapper>(response);
 };
 
-export const getDetailHero = async (characterId: string): Promise<CharacterDataWrapper> => {
+export const getDetailSuper = async (characterId: string): Promise<CharacterDataWrapper> => {
   const url = `${API_BASE_URL}/characters/${characterId}?${query}`;
   const response = await fetch(url);
 
   return handleResponse<CharacterDataWrapper>(response);
 };
+
+export const searchSuperCharacter = async (querySearch: string | null): Promise<CharacterDataWrapper> => {
+  const url = `${API_BASE_URL}/characters?nameStartsWith=${querySearch}&limit=99&${query}`;
+  const response = await fetch(url);
+
+  return handleResponse<CharacterDataWrapper>(response);
+};
+

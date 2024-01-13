@@ -1,10 +1,10 @@
 import Navbar from "./ui/Components/Navbar/Navbar";
-import HeroCard from "./ui/Components/HeroCard/HeroCard";
-import { getHero } from "../../src/utils/api";
+import SuperCard from "./ui/Components/SuperCard/SuperCard";
+import { getSuper } from "../../src/utils/api";
 import "./ui/globals.css";
 
 export default async function Home() {
-  const hero = await getHero();
+  const hero = await getSuper();
   console.log(hero)
   return (
     <main>
@@ -13,7 +13,7 @@ export default async function Home() {
         <h1>Home</h1>
         <div className="hero-card-container">
           {hero.results.map(character => (
-            <HeroCard key={character.id} character={character}/>
+            <SuperCard key={character.id} character={character}/>
           ))}
         </div>
       </div>

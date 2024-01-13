@@ -1,4 +1,4 @@
-import { getDetailHero } from "@/utils/api";
+import { getDetailSuper } from "@/utils/api";
 import Image from "next/image";
 import { FC } from "react";
 import "./heroDetail.css";
@@ -11,7 +11,7 @@ interface HeroDetailProps {
 
 const HeroDetail: FC<HeroDetailProps> = async ({ params }) => {
   const { id } = params;
-  const character = await getDetailHero(id);
+  const character = await getDetailSuper(id);
   const { thumbnail, name, description } = character.results[0];
 
   return (
