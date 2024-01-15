@@ -1,0 +1,45 @@
+/* SKELETON */
+.card-skeleton {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 500px; 
+  height: 400px; 
+  margin: 16px; 
+}
+
+.image-skeleton {
+  width: 40%; 
+  height: 100%;
+  background-color: #ddd; 
+  animation: pulse 1.5s infinite;
+}
+
+.content-skeleton {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.text-skeleton {
+  width: 80%; 
+  height: 20px; 
+  background-color: #ddd; 
+  margin-bottom: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.text-skeleton:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

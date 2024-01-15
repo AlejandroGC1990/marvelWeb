@@ -5,9 +5,11 @@ import { searchSuperCharacter } from "@/utils/api";
 import { useSearchParams } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 import "./search.css";
-import "./../../ui/Components/SuperCard/SuperCard.css";
 import "../../ui/globals.css";
 import SuperCard from "@/app/ui/Components/SuperCard/SuperCard";
+import "./../../ui/Components/SuperCard/SuperCard.css";
+import SuperCardSkeleton from "@/app/ui/Components/Loading/SuperCardSkeleton";
+import "../../ui/Components/Loading/Loading.css";
 
 const SearchPage: FC = ({}) => {
   const searchParams = useSearchParams();
@@ -39,7 +41,14 @@ const SearchPage: FC = ({}) => {
         Search for <span>"{querySearch}"</span>
       </h1>
       {isLoading ? (
-        <div className="mt-10">loading...</div>
+        <div>
+          <SuperCardSkeleton />
+          <SuperCardSkeleton />
+          <SuperCardSkeleton />
+          <SuperCardSkeleton />
+          <SuperCardSkeleton />
+          <SuperCardSkeleton />
+        </div>
       ) : (
         <div className="super-card-container">
           {character.map((character) => (
