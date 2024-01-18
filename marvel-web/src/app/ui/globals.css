@@ -1,7 +1,11 @@
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #071672;
+  background: linear-gradient(
+    to right,
+    rgba(166, 145, 0, 0.75) 0%,
+    #071672 100%
+  );
 }
 .app-container {
   max-width: 1200px;
