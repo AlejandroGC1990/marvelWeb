@@ -6,24 +6,27 @@ import Link from "next/link";
 
 interface SuperCardProps {
   character: Character;
-};
+}
 
 const SuperCard: FC<SuperCardProps> = ({ character }) => {
-
   return (
     <div className="card-container">
-      <div className="card-image">
-        <Image 
+      <div className="card-container-image">
+        <Image
+          className="card-image"
           src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-          alt={`${character.name}`} 
-          width={500}
+          alt={`${character.name}`}
+          width={300}
           height={400}
-          />
+        />
       </div>
+
       <div className="card-content">
-        <h3>{character.name}</h3> 
+        <div className="card-title">{character.name}</div>
         <p>{character.description}</p>
-        <Link href={`/dashboard/heroDetail/${character.id}`}  className="btn btn-primary">Detail {character.name}</Link>
+        <Link href={`/dashboard/heroDetail/${character.id}`} className="btn">
+          Detail {character.name}
+        </Link>
       </div>
     </div>
   );

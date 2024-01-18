@@ -1,49 +1,82 @@
 .card-container {
   display: flex;
+  /* flex-wrap: row; */
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  border-radius: 10px;
+  justify-content: flex-start;
+  /* justify-content: space-between; */
+  margin-bottom: 50px;
+  border-radius: 100px;
+  border: 1px solid #3490dc;
+  /* border: 1px solid #FFE740; */
+  /* background-color:  #2C0571; */
+  background: linear-gradient(
+    to right,
+    rgba(166, 145, 0, 0.75) 0%,
+    #2c0571 100%
+  );
+  width: 60vw; /* Establece la altura en relación al ancho de la pantalla */
+  height: 12vw;
+  position: relative;
+  -webkit-box-shadow: 16px 1px 21px 0px #000000;
+  box-shadow: 16px 1px 21px 0px #000000;
+  /* box-shadow: 0px 30px 8px 0 rgba(0, 0, 0, 0.92); */
+  /* background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%); */
 }
 
-.card {
-  width: calc(33.33% - 10px);
-  margin-bottom: 20px;
-  background-color: #fff; 
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.card-container-image {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 -10px;
 }
 
-.card img {
+.card-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  border-radius: 100px;
+  display: inline-block;
+  box-shadow: 0 0 50px 30px rgba(166, 145, 0, 0.75); /* Color más intenso para el centro */
+  background: radial-gradient(
+    rgba(166, 145, 0, 0.3),
+    rgba(166, 145, 0, 0) 70%
+  ); /* Agrega un degradado para difuminar la sombra */
+  object-fit: cover;
+  /* overflow: hidden;Asegura que la imagen se ajuste al contenedor redondeado */
 }
 
 .card-content {
-  padding: 16px;
+  /* background-color: green; */
+  width: 62%;
+  padding-left: 80px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-title {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 8px;
+  color: aliceblue;
 }
 
-.card-actions {
+/* .card-actions {
   display: flex;
   justify-content: flex-end;
-}
+} */
 
 .btn {
   padding: 8px 16px;
   background-color: #3490dc;
-  color: #fff; 
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
-
+/* 
 .btn-primary {
   background-color: #3490dc;
-}
+} */
