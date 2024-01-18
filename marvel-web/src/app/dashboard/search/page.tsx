@@ -8,24 +8,29 @@ import SuperCard from "@/app/ui/Components/SuperCard/SuperCard";
 import SuperCardSkeleton from "@/app/ui/Components/Loading/SuperCardSkeleton";
 import "./search.css";
 import "../../ui/globals.css";
+import NotFound from "../notFound/page";
 
 const SearchPage: FC = () => {
   const searchParams = useSearchParams();
   const querySearch = searchParams.get("query");
+
   const [character, setCharacter] = useState<Character[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  
+  const [noResults, setNoResults] = useState<boolean>(false);
+
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
 
       try {
         const data = await searchSuperCharacter(querySearch);
-        setCharacter(data.results);
-
+        if (data.results.length === 0) {
+          setNoResults(true);
+        } else {
+          setCharacter(data.results);
+        }
       } catch (error) {
         console.error(error);
-
       }
       setIsLoading(false);
     };
@@ -49,6 +54,8 @@ const SearchPage: FC = () => {
           <SuperCardSkeleton />
           <SuperCardSkeleton />
         </div>
+      ) : noResults ? (
+        <NotFound />
       ) : (
         <div className="super-card-container">
           {character.map((character) => (

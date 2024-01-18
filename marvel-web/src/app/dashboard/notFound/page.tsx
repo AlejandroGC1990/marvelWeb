@@ -1,14 +1,17 @@
+'use client';
+import "../../ui/error.css";
 import Link from 'next/link';
 
-export default async function NotFound() {
-
+const NotFound = () => {
     return (
-    <div>
+      <div className="error-container">
       <h2>Not Found</h2>
       <p>Could not find requested resource</p>
-      <p>
+      <button>
         View <Link href="/">all posts</Link>
-      </p>
+      </button>
     </div>
   )
 }
+
+export default NotFound;
