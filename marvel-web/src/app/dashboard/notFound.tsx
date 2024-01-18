@@ -1,5 +1,5 @@
 'use client';
-import "../../ui/error.css";
+import "../ui/error.css";
 import Link from 'next/link';
 
 const NotFound = () => {
