@@ -2,6 +2,11 @@ import Navbar from "../../ui/Components/Navbar/Navbar";
 import SuperCard from "../../ui/Components/SuperCard/SuperCard";
 import { getSuper } from "../../../utils/api";
 import "../../ui/globals.css";
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Home',
+};
 
 export default async function Home() {
   const hero = await getSuper();

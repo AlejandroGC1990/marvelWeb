@@ -8,7 +8,6 @@ import SuperCard from "@/app/ui/Components/SuperCard/SuperCard";
 import SuperCardSkeleton from "@/app/ui/Components/Loading/SuperCardSkeleton";
 import "./search.css";
 import "../../ui/globals.css";
-// import {NextRouter,useRouter} from "next/router";
 
 const SearchPage: FC = () => {
   const searchParams = useSearchParams();
@@ -20,24 +19,13 @@ const SearchPage: FC = () => {
     const fetchData = async () => {
       setIsLoading(true);
 
-      //Function to random-error
-      function getRandomInt(count: number) {
-        return Math.floor(Math.random() * count);
-      }
-
       try {
-        //If number is equal to 1, throw new error
-        const random = getRandomInt(2);
-        if (random === 1) {
-          console.log("ERROR-RANDOM");
-          throw new Error();
-        }
-
         const data = await searchSuperCharacter(querySearch);
         setCharacter(data.results);
+
       } catch (error) {
         console.error(error);
-        // useRouter.push("/marvelWeb/marvel-web/src/app/dashboard/not-found.tsx");
+
       }
       setIsLoading(false);
     };
@@ -73,4 +61,3 @@ const SearchPage: FC = () => {
 };
 
 export default SearchPage;
-//1.05.23

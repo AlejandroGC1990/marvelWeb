@@ -2,6 +2,11 @@ import { getDetailSuper } from "../../../../utils/api";
 import Image from "next/image";
 import { FC } from "react";
 import "./heroDetail.css";
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Hero Detail Page',
+};
 
 interface HeroDetailProps {
   params: {

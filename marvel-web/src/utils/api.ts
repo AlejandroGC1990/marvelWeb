@@ -17,7 +17,6 @@ const query = `ts=${timeStamp}&apikey=${API_PUBLIC_KEY}&hash=${hash}`;
 
 const handleResponse = async <T>(response: Response) => {
   if (!response.ok) {
-    // throw new Error(response.statusText);
     const errorText = await response.text();
     throw new Error(`Response not OK: ${response.status} - ${errorText}`);
   }
