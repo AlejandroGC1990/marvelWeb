@@ -1,21 +1,11 @@
-import Navbar from "./ui/Components/Navbar/Navbar";
-import SuperCard from "./ui/Components/SuperCard/SuperCard";
-import { getSuper } from "../../src/utils/api";
 import "./ui/globals.css";
+import Home from "./dashboard/home/page";
 
-export default async function Home() {
-  const hero = await getSuper();
-  console.log(hero)
+export default async function Page() {
   return (
     <main>
       <div className="app-container">
-        <Navbar />
-        <h1>Home</h1>
-        <div className="hero-card-container">
-          {hero.results.map(character => (
-            <SuperCard key={character.id} character={character}/>
-          ))}
-        </div>
+        <Home />
       </div>
     </main>
   );

@@ -1,4 +1,4 @@
-import { getDetailSuper } from "@/utils/api";
+import { getDetailSuper } from "../../../../utils/api";
 import Image from "next/image";
 import { FC } from "react";
 import "./heroDetail.css";
