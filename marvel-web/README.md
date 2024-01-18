@@ -7,6 +7,8 @@ TODO
     +Navbar
     +HeroDetail
     +Search
+    +error
+    +NotFound
 -Accesibilidad
 -Configurar BBDD en Vercel
 -Autentificación

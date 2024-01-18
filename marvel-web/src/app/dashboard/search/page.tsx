@@ -8,7 +8,7 @@ import SuperCard from "@/app/ui/Components/SuperCard/SuperCard";
 import SuperCardSkeleton from "@/app/ui/Components/Loading/SuperCardSkeleton";
 import "./search.css";
 import "../../ui/globals.css";
-import NotFound from "../notFound/page";
+import NotFound from "./../notFound/page";
 
 const SearchPage: FC = () => {
   const searchParams = useSearchParams();
@@ -24,7 +24,8 @@ const SearchPage: FC = () => {
 
       try {
         const data = await searchSuperCharacter(querySearch);
-        if (data.results.length === 0) {
+        console.log(data.results.length);
+        if (data.results.length < 1) {
           setNoResults(true);
         } else {
           setCharacter(data.results);
