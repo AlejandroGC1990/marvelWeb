@@ -25,7 +25,7 @@ const SuperCard: FC<SuperCardProps> = ({ character }) => {
           <div className="card-title">{character.name}</div>
           {/* <p>{character.description}</p> */}
           <Link href={`/dashboard/heroDetail/${character.id}`} className="btn">
-            Detail {character.name}
+            Detail Page
           </Link>
         </div>
       </div>

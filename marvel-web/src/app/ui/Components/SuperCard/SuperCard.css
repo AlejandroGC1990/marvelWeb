@@ -65,7 +65,7 @@
   flex-direction: column;
   justify-content: flex-end;
   margin: 0 20px 0 0;
-  
+
   /* background-color: aqua; */
 } 
 
@@ -77,6 +77,7 @@
 }
 
 .btn {
+  width: 60px;
   padding: 8px 16px;
   background-color: #03426a;
   /* background-color: #3490dc; */

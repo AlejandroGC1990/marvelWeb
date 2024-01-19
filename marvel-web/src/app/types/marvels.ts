@@ -8,5 +8,6 @@ export interface Character {
     }
 }
 export interface CharacterDataWrapper {
-    results: Character[]
+    results: Character[],
+    total: number,
 }

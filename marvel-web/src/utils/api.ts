@@ -24,8 +24,9 @@ const handleResponse = async <T>(response: Response) => {
   return data.data as T;
 };
 
-export const getSuper = async (): Promise<CharacterDataWrapper> => {
-  const url = `${API_BASE_URL}/characters?${query}`;
+export const getSuper = async (offset: number): Promise<CharacterDataWrapper> => {
+  const url = `${API_BASE_URL}/characters?${query}&offset=${offset}&limit=20`;
+  // const url = `${API_BASE_URL}/characters?${query}`;
   const response = await fetch(url);
   return handleResponse<CharacterDataWrapper>(response);
 };
