@@ -12,6 +12,7 @@ TODO
     +Search
     +error
     +NotFound
+    +Responsive
 -Accesibilidad
 -Configurar BBDD en Vercel
 -Autentificación

@@ -16,17 +16,18 @@ const SuperCard: FC<SuperCardProps> = ({ character }) => {
           className="card-image"
           src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
           alt={`${character.name}`}
-          width={300}
-          height={400}
+          width={200}
+          height={300}
         />
       </div>
-
       <div className="card-content">
-        <div className="card-title">{character.name}</div>
-        <p>{character.description}</p>
-        <Link href={`/dashboard/heroDetail/${character.id}`} className="btn">
-          Detail {character.name}
-        </Link>
+        <div className="card-actions">
+          <div className="card-title">{character.name}</div>
+          {/* <p>{character.description}</p> */}
+          <Link href={`/dashboard/heroDetail/${character.id}`} className="btn">
+            Detail {character.name}
+          </Link>
+        </div>
       </div>
     </div>
   );

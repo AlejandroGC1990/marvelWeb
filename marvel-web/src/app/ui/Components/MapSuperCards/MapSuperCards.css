@@ -1,0 +1,8 @@
+.container-map-supercard {
+  /* background-color: pink; */
+  width: 100%;
+  height: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribuye las cards en dos columnas */
+}

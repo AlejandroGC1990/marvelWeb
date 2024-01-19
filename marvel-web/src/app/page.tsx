@@ -1,14 +1,12 @@
 import "./ui/globals.css";
 import Home from "./dashboard/home/page";
-import { Metadata } from 'next';
- 
-export const metadata: Metadata = {
-  title: 'Home Page',
-};
+import Navbar from "./ui/Components/Navbar/Navbar";
+
 export default async function Page() {
   return (
     <main>
-      <div className="app-container">
+      <Navbar />
+      <div className="page-container">
         <Home />
       </div>
     </main>
