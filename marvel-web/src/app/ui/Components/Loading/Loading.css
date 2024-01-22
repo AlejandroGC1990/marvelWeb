@@ -1,38 +1,53 @@
 /* SKELETON */
 .skeleton-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: column;
   align-items: center;
   position: relative;
-  width: 100%;
-  height: 300px;
-  padding-left: 20px;
-  background-color: transparent;
+  display: flex;
+  width: 350px;
+  height: 400px;
+  padding: 20px;
+  margin: auto;
 }
 .skeleton-card-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: center;
   position: relative;
-  width: 48%;
-  height: 300px;
-  padding-left: 20px;
+  display: flex;
+  width: 350px;
+  height: 400px;
+  padding: 20px;
+  margin: auto;
 }
-.skeleton-card-content {
-  background-color: rgb(179, 177, 177);
-  height: 140px;
-  width: 400px;
-  border-radius: 100px;
-  position: relative;
-}
+
 .skeleton-card-container-image {
-  background-color: rgb(179, 177, 177);
-  width: 35%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
   border-radius: 100px;
+  border: 6px solid rgba(114, 114, 111, 0.75);
+  background-color: rgba(114, 114, 111, 0.75);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+  3px 5px 15px 5px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 10px 13px -7px #000000, 3px 5px 15px 5px rgba(0, 0, 0, 0.34);
+}
+
+.skeleton-card-content {
+  height: 10px;
+  width: 35%;
   position: absolute;
+  bottom: 0;
+  padding: 25px;
+  border-radius: 100px;
+  border: 6px solid rgba(114, 114, 111, 0.75);
+  background-color: grey;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    3px 5px 15px 5px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 10px 13px -7px #000000, 3px 5px 15px 5px rgba(0, 0, 0, 0.34);
+  z-index: 1;
 }
 
 @keyframes pulse {

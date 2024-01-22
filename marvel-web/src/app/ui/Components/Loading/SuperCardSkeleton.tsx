@@ -16,6 +16,7 @@ const SuperCardSkeleton: FC<SuperCardSkeletonProps> = () => {
   return (
     <div className="skeleton-container">
       <SkeletonCard />
+      {/* <SkeletonCard />
       <SkeletonCard />
       <SkeletonCard />
       <SkeletonCard />
@@ -24,8 +25,7 @@ const SuperCardSkeleton: FC<SuperCardSkeletonProps> = () => {
       <SkeletonCard />
       <SkeletonCard />
       <SkeletonCard />
-      <SkeletonCard />
-      <SkeletonCard />
+      <SkeletonCard /> */}
     </div>
   );
 };
