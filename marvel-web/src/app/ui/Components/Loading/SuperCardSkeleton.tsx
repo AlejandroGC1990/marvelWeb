@@ -3,20 +3,29 @@ import "./Loading.css";
 
 interface SuperCardSkeletonProps {}
 
+const SkeletonCard = () => {
+  return (
+    <div className="skeleton-card-container">
+      <div className="skeleton-card-container-image"></div>
+      <div className="skeleton-card-content"></div>
+    </div>
+  );
+};
+
 const SuperCardSkeleton: FC<SuperCardSkeletonProps> = () => {
   return (
-    <div className="card-skeleton">
-      <div className="image-skeleton"></div>
-      <div className="content-skeleton">
-        <div className="text-skeleton"></div>
-        <div className="text-skeleton"></div>
-        <div className="text-skeleton"></div>
-        <div className="text-skeleton"></div>
-        <div className="text-skeleton"></div>
-        <div className="text-skeleton"></div>
-        <div className="text-skeleton"></div>
-        <div className="text-skeleton"></div>
-      </div>
+    <div className="skeleton-container">
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
     </div>
   );
 };

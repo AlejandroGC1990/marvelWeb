@@ -6,9 +6,9 @@ export default async function Page() {
   return (
     <main>
       <Navbar />
-      <div className="page-container">
+      
         <Home />
-      </div>
+      
     </main>
   );
 }

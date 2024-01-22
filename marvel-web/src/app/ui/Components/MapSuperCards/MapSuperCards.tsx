@@ -15,7 +15,7 @@ export default function MapSuperCard() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [noResults, setNoResults] = useState<boolean>(false);
 
-  const heroesPerPage = 10;
+  const heroesPerPage = 12;
   const offSet = currentPage * heroesPerPage;
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function MapSuperCard() {
   const displayedHeroes = heroes.slice(0, heroesPerPage);
 
   return (
-    <div>
+    <div className="container-map">
       {isLoading ? (
         <div className="container-map-skeletons">
           <SuperCardSkeleton />
@@ -62,14 +62,16 @@ export default function MapSuperCard() {
           {displayedHeroes.map((character) => (
             <SuperCard key={character.id} character={character} />
           ))}
-          <ReactPaginate
-            pageCount={totalPages}
-            pageRangeDisplayed={3}
-            marginPagesDisplayed={1}
-            onPageChange={handlePageClick}
-            containerClassName={"pagination"}
-            activeClassName={"active"}
-          />
+          <div className="container-pagination">
+            <ReactPaginate
+              pageCount={totalPages}
+              pageRangeDisplayed={3}
+              marginPagesDisplayed={1}
+              onPageChange={handlePageClick}
+              containerClassName={"pagination"}
+              activeClassName={"active"}
+            />
+          </div>
         </div>
       )}
     </div>

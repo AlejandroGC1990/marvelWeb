@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default async function Home() {
   
   return (
-    <div>
+    <div className="page-container">
       <h1>Home</h1>
       <MapSuperCard />
     </div>

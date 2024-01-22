@@ -10,7 +10,10 @@ interface SuperCardProps {
 
 const SuperCard: FC<SuperCardProps> = ({ character }) => {
   return (
-    <div className="card-container">
+    <Link
+      href={`/dashboard/heroDetail/${character.id}`}
+      className="card-container"
+    >
       <div className="card-container-image">
         <Image
           className="card-image"
@@ -24,12 +27,9 @@ const SuperCard: FC<SuperCardProps> = ({ character }) => {
         <div className="card-actions">
           <div className="card-title">{character.name}</div>
           {/* <p>{character.description}</p> */}
-          <Link href={`/dashboard/heroDetail/${character.id}`} className="btn">
-            Detail Page
-          </Link>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

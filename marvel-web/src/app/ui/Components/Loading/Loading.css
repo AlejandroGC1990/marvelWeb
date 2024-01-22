@@ -1,37 +1,38 @@
 /* SKELETON */
-.card-skeleton {
+.skeleton-container {
   display: flex;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #f4f4f4;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 500px; 
-  height: 400px; 
-  margin: 16px; 
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  padding-left: 20px;
+  background-color: transparent;
 }
-
-.image-skeleton {
-  width: 40%; 
-  height: 100%;
-  background-color: #ddd; 
-  animation: pulse 1.5s infinite;
+.skeleton-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 48%;
+  height: 300px;
+  padding-left: 20px;
 }
-
-.content-skeleton {
-  flex-grow: 1;
-  padding: 16px;
+.skeleton-card-content {
+  background-color: rgb(179, 177, 177);
+  height: 140px;
+  width: 400px;
+  border-radius: 100px;
+  position: relative;
 }
-
-.text-skeleton {
-  width: 80%; 
-  height: 20px; 
-  background-color: #ddd; 
-  margin-bottom: 8px;
-  animation: pulse 1.5s infinite;
-}
-
-.text-skeleton:last-child {
-  margin-bottom: 0;
+.skeleton-card-container-image {
+  background-color: rgb(179, 177, 177);
+  width: 35%;
+  height: 70%;
+  border-radius: 100px;
+  position: absolute;
 }
 
 @keyframes pulse {

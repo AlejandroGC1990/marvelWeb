@@ -1,88 +1,52 @@
 .card-container {
-  /* background: green; */
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   position: relative;
-  width: 48%;
-  height: 300px;
-  padding-left: 20px;
+  width: 350px;
+  height: 400px;
+  padding: 20px;
+  margin: auto;
 }
 
 .card-container-image {
-  width: 35%;
-  height: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
   border-radius: 100px;
-  position: absolute;
-  z-index: 1;
+  border: 6px solid rgba(166, 145, 0, 0.75);
+  background-color: rgba(166, 145, 0, 0.75);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+  3px 5px 15px 5px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 10px 13px -7px #000000, 3px 5px 15px 5px rgba(0, 0, 0, 0.34);
+  
 }
 
 .card-image {
   width: 100%;
   height: 100%;
   border-radius: 100px;
-  display: inline-block;
-  box-shadow: 0 0 50px 30px rgba(166, 145, 0, 0.75);
-  background: radial-gradient(rgba(166, 145, 0, 0.3), rgba(166, 145, 0, 0) 70%);
-  object-fit: cover;
-  border-right: 160px;
-  border-top: 50px;
-  border-left: 60px;
-  border-bottom: 60px;
+  /* box-shadow: 0 0 1000px 30px rgba(166, 145, 0, 0.75); */
 }
 
 .card-content {
   position: absolute;
-  height: 140px;
-  width: 400px;
-  padding-left: 90px;
+  bottom: 0;
+  padding: 25px;
   color: aliceblue;
-  display: flex;
-  flex-direction: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  /* justify-content: center; */
   border-radius: 100px;
-  border: 1px solid #03426a;
-  /* border: 1px solid #3490dc; */
-  /* border: 1px solid #FFE740; */
-  background: linear-gradient(
-    to right,
-    rgba(166, 145, 0, 0.75) 0%,
-    #2c0571 100%
-  );
-  position: relative;
-  -webkit-box-shadow: 16px 1px 21px 0px #000000;
-  box-shadow: 16px 1px 21px 0px #000000;
+  border: 6px solid rgba(166, 145, 0, 0.75);
+  background-color: #2c0571;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    3px 5px 15px 5px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 10px 13px -7px #000000, 3px 5px 15px 5px rgba(0, 0, 0, 0.34);
+  z-index: 1;
 }
-
-.card-actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 0 20px 0 0;
-
-  /* background-color: aqua; */
-} 
 
 .card-title {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 8px;
   color: aliceblue;
-}
-
-.btn {
-  width: 60px;
-  padding: 8px 16px;
-  background-color: #03426a;
-  /* background-color: #3490dc; */
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
