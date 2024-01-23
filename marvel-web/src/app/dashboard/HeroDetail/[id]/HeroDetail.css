@@ -1,21 +1,28 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+
+  /* background-color: aqua; */
 }
 
-.heroDetails {
-  max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+.character-image{
+  margin: auto;
+  border: 6px solid rgba(166, 145, 0, 0.75);
+  border-radius: 20px;
 }
 
-.description {
-  font-weight: 300;
-  font-size: 0.875rem;
+.heroDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: aliceblue;
 }

@@ -1,4 +1,8 @@
 TODO
+-Hacer escrito (README)
+    +Explicar arquitectura de código
+    + "       porqué usar css.
+    +Usar capturas para enseñar los elementos para muestra de información.
 -Optimizar código
     +Mapeo de cards en una función.
         *El mapeo de cards se ve con el efecto de esfera (como si girara una esfera al hacer scrol).
@@ -8,6 +12,8 @@ TODO
     +SuperCard (alternarlas de posición?)
     +Navbar
     +HeroDetail
+        *Añadir carruseles a los eventos y cómics
+        *Aplicar sangría a los textos
     +Search
     +error
     +NotFound

@@ -2,10 +2,10 @@ import { getDetailSuper } from "../../../../utils/api";
 import Image from "next/image";
 import { FC } from "react";
 import "./heroDetail.css";
-import { Metadata } from 'next';
- 
+import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: 'Hero Detail Page',
+  title: "Hero Detail Page",
 };
 
 interface HeroDetailProps {
@@ -21,17 +21,20 @@ const HeroDetail: FC<HeroDetailProps> = async ({ params }) => {
 
   return (
     <div className="container">
-      <div className="card-image">
-        <Image
-          src={`${thumbnail.path}.${thumbnail.extension}`}
-          alt={name}
-          width={500}
-          height={400}
-        />
-      </div>
+      <Image
+        src={`${thumbnail.path}.${thumbnail.extension}`}
+        alt={name}
+        width={500}
+        height={400}
+        className="character-image"
+      />
       <div className="heroDetails">
-        <h1>{name}</h1>
-        <p className="description">{description}</p>
+        <h1 className="text">{name}</h1>
+        {description ? (
+          <p className="text">{description}</p>
+        ) : (
+          <p className="text">At this time we haven´t this information.</p>
+        )}
       </div>
     </div>
   );
