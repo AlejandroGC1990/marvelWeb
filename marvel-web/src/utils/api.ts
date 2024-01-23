@@ -26,7 +26,6 @@ const handleResponse = async <T>(response: Response) => {
 
 export const getSuper = async (offset: number): Promise<CharacterDataWrapper> => {
   const url = `${API_BASE_URL}/characters?${query}&offset=${offset}&limit=20`;
-  // const url = `${API_BASE_URL}/characters?${query}`;
   const response = await fetch(url);
   return handleResponse<CharacterDataWrapper>(response);
 };
@@ -46,3 +45,4 @@ export const searchSuperCharacter = async (querySearch: string | null): Promise<
 
   return handleResponse<CharacterDataWrapper>(response);
 };
+

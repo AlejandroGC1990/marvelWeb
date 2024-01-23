@@ -6,7 +6,9 @@ export interface Character {
         path:string,
         extension: string,
     }
+    
 }
+
 export interface CharacterDataWrapper {
     results: Character[],
     total: number,

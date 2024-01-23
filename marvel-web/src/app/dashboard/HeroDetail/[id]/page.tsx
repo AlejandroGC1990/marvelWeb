@@ -2,6 +2,7 @@ import { getDetailSuper } from "../../../../utils/api";
 import Image from "next/image";
 import { FC } from "react";
 import "./heroDetail.css";
+import "../../../ui/globals.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ const HeroDetail: FC<HeroDetailProps> = async ({ params }) => {
   const { thumbnail, name, description } = character.results[0];
 
   return (
-    <div className="container">
+    <div className="page-container">
       <Image
         src={`${thumbnail.path}.${thumbnail.extension}`}
         alt={name}

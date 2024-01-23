@@ -36,7 +36,7 @@ export default function MapSuperCard() {
     };
 
     fetchData();
-  }, [offSet]);
+  }, [offSet, totalPages]);
 
   const handlePageClick = (data: { selected: number }) => {
     setCurrentPage(data.selected);
@@ -70,6 +70,7 @@ export default function MapSuperCard() {
               onPageChange={handlePageClick}
               containerClassName={"pagination"}
               activeClassName={"active"}
+              forcePage={currentPage}
             />
           </div>
         </div>
